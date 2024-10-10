@@ -15,4 +15,4 @@ I used LibTorch version 2.1.2_cu118, and the project looks for environment varia
 
 The project also looks for the environment variable "FBXSDK" when compiling some portion that depends on FBX.
 
-I excluded the assets that I was using as the intenion here is a just as a code reference, but generally assets are placed in the project's "resources" directory and the AssetBuilder in the engine processes them and places the product in the generated "data" folder of the project.
+I excluded the assets that I was using as the intenion here is a just as a code reference, but generally assets are placed in the project's "resources" directory and then when building the project the AssetBuilder in the engine processes them and places the product in the generated "data" folder.
