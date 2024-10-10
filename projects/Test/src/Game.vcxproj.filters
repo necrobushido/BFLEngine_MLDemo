@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Gameflow">
+      <UniqueIdentifier>{3d728ee5-a045-4fc8-a446-a881b8da2ff1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="GameFlow.h">
+      <Filter>Gameflow</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugMenu.h">
+      <Filter>Gameflow</Filter>
+    </ClInclude>
+    <ClInclude Include="TestGameState.h">
+      <Filter>Gameflow</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="GameFlow.cpp">
+      <Filter>Gameflow</Filter>
+    </ClCompile>
+    <ClCompile Include="GameFlowMarkers.cpp">
+      <Filter>Gameflow</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugMenu.cpp">
+      <Filter>Gameflow</Filter>
+    </ClCompile>
+    <ClCompile Include="TestGameState.cpp">
+      <Filter>Gameflow</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

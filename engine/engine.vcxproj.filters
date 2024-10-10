@@ -1,0 +1,638 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{a56e5c73-48b4-453c-8829-e752f06bbd3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{611c4048-3455-402a-afd1-d8590c615f07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Input">
+      <UniqueIdentifier>{5997d3e5-f81d-4572-ad16-8673f6f55a3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Windows">
+      <UniqueIdentifier>{cd283bad-8dbf-45c3-b474-589589af4392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{04aa19eb-d28e-4e74-9944-bc6927424b94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{c40b7ccc-a788-4fc8-9b67-b481ba3f676d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty">
+      <UniqueIdentifier>{df3672b0-d555-4a07-9c71-02e1b9799f1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Font">
+      <UniqueIdentifier>{9b88b0a7-c460-4922-9434-b480f7ef01f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Memory">
+      <UniqueIdentifier>{d2cc43a6-bc0f-4c9f-9a75-cdb3eb53b7dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Threading">
+      <UniqueIdentifier>{c12de8a7-6684-4b82-a121-d7033f633e89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture">
+      <UniqueIdentifier>{b0b3d91a-e387-4fd9-8930-044adbaeff14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{2405a7b1-8cf3-4605-b06e-93b5afb0672e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vertex">
+      <UniqueIdentifier>{8527e31a-a9c9-4aeb-afc5-fff6091e0d95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Material">
+      <UniqueIdentifier>{a5df298d-a08d-4ad3-8a4b-c605a4b50a77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\FreeType">
+      <UniqueIdentifier>{5e23e33f-7db1-4bc7-9290-f8d3c7779049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\FreeType\src">
+      <UniqueIdentifier>{71496570-29c0-4db4-9e81-f34421be8f4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThirdParty\FreeType\src\FT_MODULES">
+      <UniqueIdentifier>{d29c89e6-d4f1-41a7-b026-12c2569793e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="State">
+      <UniqueIdentifier>{3e1798e8-792e-4f38-8c31-3daf6e6653c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML">
+      <UniqueIdentifier>{322e716c-af81-48ff-90d5-91879e3a5e90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sprite">
+      <UniqueIdentifier>{0cf41901-d056-498d-a899-ad84d7e76993}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\dataTypes.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\types.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EngineAssert.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Print.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pch.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Clock.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector2.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Input.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameWindow.h">
+      <Filter>Core\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GLWindow.h">
+      <Filter>Core\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Window.h">
+      <Filter>Core\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameState.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Frustum.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CameraBase.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector3.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mtx33.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mtx44.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Renderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DrawModes.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DefaultShaderProgram.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ShaderProgram.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FileManager.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HashTable.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ListMacros.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hash.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OrthoFont.h">
+      <Filter>Font</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LiveTextFont.h">
+      <Filter>Font</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LiveTextGlyph.h">
+      <Filter>Font</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Reference.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\undefnew.h">
+      <Filter>Core\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\defnew.h">
+      <Filter>Core\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mutex.h">
+      <Filter>Core\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Jpg.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PngFormat.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Texture.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TextureData.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tga.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CollisionMeshData.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MeshData.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ModelData.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BoneData.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VertexBuffer.h">
+      <Filter>Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VertexBufferBase.h">
+      <Filter>Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Color.h">
+      <Filter>Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MaterialData.h">
+      <Filter>Material</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MathConstants.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MemoryManager.h">
+      <Filter>Core\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EngineMemory.h">
+      <Filter>Core\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StateLogic.h">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Thread.h">
+      <Filter>Core\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WindowsDialog.h">
+      <Filter>Core\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DialogControl.h">
+      <Filter>Core\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EditControl.h">
+      <Filter>Core\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ListBox.h">
+      <Filter>Core\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DefaultShaders.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\tinyxml\tinystr.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="ThirdParty\tinyxml\tinyxml.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WindowsFileDialog.h">
+      <Filter>Core\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AnimationData.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Animation.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Model.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Mtx43.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PerspectiveFont.h">
+      <Filter>Font</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quat.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MathNamespace.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Math2D.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BoundingBox2D.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BoundingBox3D.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JobThread.h">
+      <Filter>Core\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BoneHierarchyAnimation.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EngineArray.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sprite.h">
+      <Filter>Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ViewOriginCamera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\EngineAssert.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pch.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vector2.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Input.cpp">
+      <Filter>Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameWindow.cpp">
+      <Filter>Core\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GLWindow.cpp">
+      <Filter>Core\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Window.cpp">
+      <Filter>Core\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameState.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Frustum.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CameraBase.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vector3.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mtx33.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mtx44.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DrawModes.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DefaultShaderProgram.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ShaderProgram.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FileManager.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OrthoFont.cpp">
+      <Filter>Font</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LiveTextGlyph.cpp">
+      <Filter>Font</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LiveTextFont.cpp">
+      <Filter>Font</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mutex.cpp">
+      <Filter>Core\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Jpg.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PngFormat.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Texture.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TextureData.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tga.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CollisionMeshData.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MeshData.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ModelData.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VertexBuffer.cpp">
+      <Filter>Vertex</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VertexBufferBase.cpp">
+      <Filter>Vertex</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Color.cpp">
+      <Filter>Vertex</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MemoryManager.cpp">
+      <Filter>Core\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EngineMemory.cpp">
+      <Filter>Core\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\autofit\autofit.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\bdf\bdf.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\cff\cff.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\dlg\dlgwrap.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\pcf\pcf.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\pfr\pfr.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\psaux\psaux.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\pshinter\pshinter.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\psnames\psmodule.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\raster\raster.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\sdf\sdf.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\sfnt\sfnt.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\smooth\smooth.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\svg\svg.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\truetype\truetype.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\type1\type1.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\cid\type1cid.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\type42\type42.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftbbox.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftbdf.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftbitmap.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftcid.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftfstype.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftgasp.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftgxval.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftmm.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftotval.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftpatent.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftpfr.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftstroke.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftsynth.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\fttype1.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftwinfnt.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftbase.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\cache\ftcache.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\gzip\ftgzip.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftinit.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\lzw\ftlzw.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\builds\windows\ftsystem.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\builds\windows\ftdebug.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\winfonts\winfnt.c">
+      <Filter>ThirdParty\FreeType\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftglyph.c">
+      <Filter>ThirdParty\FreeType\src\FT_MODULES</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Thread.cpp">
+      <Filter>Core\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WindowsDialog.cpp">
+      <Filter>Core\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DialogControl.cpp">
+      <Filter>Core\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EditControl.cpp">
+      <Filter>Core\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ListBox.cpp">
+      <Filter>Core\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DefaultShaders.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\tinyxml\tinystr.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\tinyxml\tinyxml.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\tinyxml\tinyxmlerror.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdParty\tinyxml\tinyxmlparser.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WindowsFileDialog.cpp">
+      <Filter>Core\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AnimationData.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Animation.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Model.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mtx43.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PerspectiveFont.cpp">
+      <Filter>Font</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Quat.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MathNamespace.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Math2D.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BoundingBox3D.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BoundingBox2D.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JobThread.cpp">
+      <Filter>Core\Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BoneHierarchyAnimation.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sprite.cpp">
+      <Filter>Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ViewOriginCamera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Mtx33.inl">
+      <Filter>Math</Filter>
+    </None>
+    <None Include="src\Mtx44.inl">
+      <Filter>Math</Filter>
+    </None>
+    <None Include="src\FileManager.inl">
+      <Filter>Core</Filter>
+    </None>
+    <None Include="src\HashTable.inl">
+      <Filter>Core</Filter>
+    </None>
+    <None Include="src\Hash.inl">
+      <Filter>Math</Filter>
+    </None>
+    <None Include="src\LiveTextFont.inl">
+      <Filter>Font</Filter>
+    </None>
+    <None Include="src\Reference.inl">
+      <Filter>Core</Filter>
+    </None>
+    <None Include="src\Texture.inl">
+      <Filter>Texture</Filter>
+    </None>
+    <None Include="src\MemoryManager.inl">
+      <Filter>Core\Memory</Filter>
+    </None>
+    <None Include="src\Animation.inl">
+      <Filter>Model</Filter>
+    </None>
+    <None Include="src\Model.inl">
+      <Filter>Model</Filter>
+    </None>
+    <None Include="src\Mtx43.inl">
+      <Filter>Math</Filter>
+    </None>
+    <None Include="src\Quat.inl">
+      <Filter>Math</Filter>
+    </None>
+  </ItemGroup>
+</Project>

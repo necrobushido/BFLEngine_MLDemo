@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{c91852ca-129d-4740-a195-cf15b48aa8e7}</ProjectGuid>
+    <RootNamespace>StaticLibTemplate</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)ThirdParty\FreeType\include;$(ProjectDir)ThirdParty\glew\include;$(ProjectDir)ThirdParty\libpng\include;$(ProjectDir)ThirdParty\jpg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>Opengl32.lib;glu32.lib;$(ProjectDir)ThirdParty\glew\lib\Debug\x64\glew32sd.lib;$(ProjectDir)ThirdParty\jpg\lib\libjpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/ignore:4006</AdditionalOptions>
+      <Verbose>
+      </Verbose>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)ThirdParty\jpg\include;$(ProjectDir)ThirdParty\FreeType\include;$(ProjectDir)ThirdParty\libpng\include;$(ProjectDir)ThirdParty\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>Opengl32.lib;glu32.lib;$(ProjectDir)ThirdParty\glew\lib\Release\x64\glew32s.lib;$(ProjectDir)ThirdParty\jpg\lib\libjpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/ignore:4006</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Animation.h" />
+    <ClInclude Include="src\AnimationData.h" />
+    <ClInclude Include="src\BoneData.h" />
+    <ClInclude Include="src\BoneHierarchyAnimation.h" />
+    <ClInclude Include="src\BoundingBox2D.h" />
+    <ClInclude Include="src\BoundingBox3D.h" />
+    <ClInclude Include="src\CameraBase.h" />
+    <ClInclude Include="src\Clock.h" />
+    <ClInclude Include="src\CollisionMeshData.h" />
+    <ClInclude Include="src\Color.h" />
+    <ClInclude Include="src\dataTypes.h" />
+    <ClInclude Include="src\DefaultShaderProgram.h" />
+    <ClInclude Include="src\DefaultShaders.h" />
+    <ClInclude Include="src\defnew.h" />
+    <ClInclude Include="src\DialogControl.h" />
+    <ClInclude Include="src\DrawModes.h" />
+    <ClInclude Include="src\EditControl.h" />
+    <ClInclude Include="src\EngineArray.h" />
+    <ClInclude Include="src\EngineAssert.h" />
+    <ClInclude Include="src\EngineMemory.h" />
+    <ClInclude Include="src\FileManager.h" />
+    <ClInclude Include="src\framework.h" />
+    <ClInclude Include="src\Frustum.h" />
+    <ClInclude Include="src\GameState.h" />
+    <ClInclude Include="src\GameWindow.h" />
+    <ClInclude Include="src\GLWindow.h" />
+    <ClInclude Include="src\Hash.h" />
+    <ClInclude Include="src\HashTable.h" />
+    <ClInclude Include="src\Input.h" />
+    <ClInclude Include="src\JobThread.h" />
+    <ClInclude Include="src\Jpg.h" />
+    <ClInclude Include="src\ListBox.h" />
+    <ClInclude Include="src\ListMacros.h" />
+    <ClInclude Include="src\LiveTextFont.h" />
+    <ClInclude Include="src\LiveTextGlyph.h" />
+    <ClInclude Include="src\MaterialData.h" />
+    <ClInclude Include="src\Math2D.h" />
+    <ClInclude Include="src\MathConstants.h" />
+    <ClInclude Include="src\MathNamespace.h" />
+    <ClInclude Include="src\MemoryManager.h" />
+    <ClInclude Include="src\MeshData.h" />
+    <ClInclude Include="src\Model.h" />
+    <ClInclude Include="src\ModelData.h" />
+    <ClInclude Include="src\Mtx33.h" />
+    <ClInclude Include="src\Mtx43.h" />
+    <ClInclude Include="src\Mtx44.h" />
+    <ClInclude Include="src\Mutex.h" />
+    <ClInclude Include="src\OrthoFont.h" />
+    <ClInclude Include="src\pch.h" />
+    <ClInclude Include="src\PerspectiveFont.h" />
+    <ClInclude Include="src\PngFormat.h" />
+    <ClInclude Include="src\Print.h" />
+    <ClInclude Include="src\Quat.h" />
+    <ClInclude Include="src\Reference.h" />
+    <ClInclude Include="src\Renderer.h" />
+    <ClInclude Include="src\ShaderProgram.h" />
+    <ClInclude Include="src\Sprite.h" />
+    <ClInclude Include="src\StateLogic.h" />
+    <ClInclude Include="src\Texture.h" />
+    <ClInclude Include="src\TextureData.h" />
+    <ClInclude Include="src\Tga.h" />
+    <ClInclude Include="src\Thread.h" />
+    <ClInclude Include="src\types.h" />
+    <ClInclude Include="src\undefnew.h" />
+    <ClInclude Include="src\Vector2.h" />
+    <ClInclude Include="src\Vector3.h" />
+    <ClInclude Include="src\VertexBuffer.h" />
+    <ClInclude Include="src\VertexBufferBase.h" />
+    <ClInclude Include="src\ViewOriginCamera.h" />
+    <ClInclude Include="src\Window.h" />
+    <ClInclude Include="src\WindowsDialog.h" />
+    <ClInclude Include="src\WindowsFileDialog.h" />
+    <ClInclude Include="ThirdParty\tinyxml\tinystr.h" />
+    <ClInclude Include="ThirdParty\tinyxml\tinyxml.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Animation.cpp" />
+    <ClCompile Include="src\AnimationData.cpp" />
+    <ClCompile Include="src\BoneHierarchyAnimation.cpp" />
+    <ClCompile Include="src\BoundingBox2D.cpp" />
+    <ClCompile Include="src\BoundingBox3D.cpp" />
+    <ClCompile Include="src\CameraBase.cpp" />
+    <ClCompile Include="src\CollisionMeshData.cpp" />
+    <ClCompile Include="src\Color.cpp" />
+    <ClCompile Include="src\DefaultShaderProgram.cpp" />
+    <ClCompile Include="src\DefaultShaders.cpp" />
+    <ClCompile Include="src\DialogControl.cpp" />
+    <ClCompile Include="src\DrawModes.cpp" />
+    <ClCompile Include="src\EditControl.cpp" />
+    <ClCompile Include="src\EngineAssert.cpp" />
+    <ClCompile Include="src\EngineMemory.cpp" />
+    <ClCompile Include="src\FileManager.cpp" />
+    <ClCompile Include="src\Frustum.cpp" />
+    <ClCompile Include="src\GameState.cpp" />
+    <ClCompile Include="src\GameWindow.cpp" />
+    <ClCompile Include="src\GLWindow.cpp" />
+    <ClCompile Include="src\Input.cpp" />
+    <ClCompile Include="src\JobThread.cpp" />
+    <ClCompile Include="src\Jpg.cpp" />
+    <ClCompile Include="src\ListBox.cpp" />
+    <ClCompile Include="src\LiveTextFont.cpp" />
+    <ClCompile Include="src\LiveTextGlyph.cpp" />
+    <ClCompile Include="src\Math2D.cpp" />
+    <ClCompile Include="src\MathNamespace.cpp" />
+    <ClCompile Include="src\MemoryManager.cpp" />
+    <ClCompile Include="src\MeshData.cpp" />
+    <ClCompile Include="src\Model.cpp" />
+    <ClCompile Include="src\ModelData.cpp" />
+    <ClCompile Include="src\Mtx33.cpp" />
+    <ClCompile Include="src\Mtx43.cpp" />
+    <ClCompile Include="src\Mtx44.cpp" />
+    <ClCompile Include="src\Mutex.cpp" />
+    <ClCompile Include="src\OrthoFont.cpp" />
+    <ClCompile Include="src\pch.cpp" />
+    <ClCompile Include="src\PerspectiveFont.cpp" />
+    <ClCompile Include="src\PngFormat.cpp" />
+    <ClCompile Include="src\Quat.cpp" />
+    <ClCompile Include="src\Renderer.cpp" />
+    <ClCompile Include="src\ShaderProgram.cpp" />
+    <ClCompile Include="src\Sprite.cpp" />
+    <ClCompile Include="src\Texture.cpp" />
+    <ClCompile Include="src\TextureData.cpp" />
+    <ClCompile Include="src\Tga.cpp" />
+    <ClCompile Include="src\Thread.cpp" />
+    <ClCompile Include="src\Vector2.cpp" />
+    <ClCompile Include="src\Vector3.cpp" />
+    <ClCompile Include="src\VertexBuffer.cpp" />
+    <ClCompile Include="src\VertexBufferBase.cpp" />
+    <ClCompile Include="src\ViewOriginCamera.cpp" />
+    <ClCompile Include="src\Window.cpp" />
+    <ClCompile Include="src\WindowsDialog.cpp" />
+    <ClCompile Include="src\WindowsFileDialog.cpp" />
+    <ClCompile Include="ThirdParty\FreeType\builds\windows\ftdebug.c" />
+    <ClCompile Include="ThirdParty\FreeType\builds\windows\ftsystem.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\autofit\autofit.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftbase.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftbbox.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftbdf.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftbitmap.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftcid.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftfstype.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftgasp.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftglyph.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftgxval.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftinit.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftmm.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftotval.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftpatent.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftpfr.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftstroke.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftsynth.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\fttype1.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\base\ftwinfnt.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\bdf\bdf.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\cache\ftcache.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\cff\cff.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\cid\type1cid.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\dlg\dlgwrap.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\gzip\ftgzip.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\lzw\ftlzw.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\pcf\pcf.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\pfr\pfr.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\psaux\psaux.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\pshinter\pshinter.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\psnames\psmodule.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\raster\raster.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\sfnt\sfnt.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\smooth\smooth.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\sdf\sdf.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\svg\svg.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\truetype\truetype.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\type1\type1.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\type42\type42.c" />
+    <ClCompile Include="ThirdParty\FreeType\src\winfonts\winfnt.c" />
+    <ClCompile Include="ThirdParty\tinyxml\tinystr.cpp" />
+    <ClCompile Include="ThirdParty\tinyxml\tinyxml.cpp" />
+    <ClCompile Include="ThirdParty\tinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="ThirdParty\tinyxml\tinyxmlparser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Animation.inl" />
+    <None Include="src\FileManager.inl" />
+    <None Include="src\Hash.inl" />
+    <None Include="src\HashTable.inl" />
+    <None Include="src\LiveTextFont.inl" />
+    <None Include="src\MemoryManager.inl" />
+    <None Include="src\Model.inl" />
+    <None Include="src\Mtx33.inl" />
+    <None Include="src\Mtx43.inl" />
+    <None Include="src\Mtx44.inl" />
+    <None Include="src\Quat.inl" />
+    <None Include="src\Reference.inl" />
+    <None Include="src\Texture.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{5EC9B8F0-83D8-4FCF-B93F-E99DD0A7F8E4}</ProjectGuid>
+    <RootNamespace>WindowsProjectTemplate</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;NOMINMAX;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\MLLib;..\..\..\engine\src\;$(LIBTORCH_DEBUG)\libtorch\include;$(LIBTORCH_DEBUG)\libtorch\include\torch\csrc\api\include;..\Shared</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\engine\x64\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>engine.lib;$(LIBTORCH_DEBUG)\libtorch\lib\c10.lib;$(LIBTORCH_DEBUG)\libtorch\lib\c10_cuda.lib;$(LIBTORCH_DEBUG)\libtorch\lib\torch_cpu.lib;$(LIBTORCH_DEBUG)\libtorch\lib\torch_cuda.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>call $(SolutionDir)buildTools\copyTorchDLLsDebug.bat</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;NOMINMAX;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\MLLib;..\..\..\engine\src\;$(LIBTORCH_RELEASE)\libtorch\include;$(LIBTORCH_RELEASE)\libtorch\include\torch\csrc\api\include;..\Shared</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\engine\x64\Release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>engine.lib;$(LIBTORCH_RELEASE)\libtorch\lib\c10.lib;$(LIBTORCH_RELEASE)\libtorch\lib\c10_cuda.lib;$(LIBTORCH_RELEASE)\libtorch\lib\torch_cpu.lib;$(LIBTORCH_RELEASE)\libtorch\lib\torch_cuda.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>call $(SolutionDir)buildTools\copyTorchDLLsRelease.bat</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\MLLib\AsciiTokenizer.cpp" />
+    <ClCompile Include="..\MLLib\AsciiWordDelimitedTokenizer.cpp" />
+    <ClCompile Include="..\MLLib\AttentionMulti.cpp" />
+    <ClCompile Include="..\MLLib\BoolSequence.cpp" />
+    <ClCompile Include="..\MLLib\C3DR6Sequence.cpp" />
+    <ClCompile Include="..\MLLib\Continuous3DRotation6.cpp" />
+    <ClCompile Include="..\MLLib\CrossAttention.cpp" />
+    <ClCompile Include="..\MLLib\CrossAttentionMulti.cpp" />
+    <ClCompile Include="..\MLLib\Encoder2D.cpp" />
+    <ClCompile Include="..\MLLib\EulerSequence.cpp" />
+    <ClCompile Include="..\MLLib\MLP.cpp" />
+    <ClCompile Include="..\MLLib\Mtx33Sequence.cpp" />
+    <ClCompile Include="..\MLLib\NNBatch.cpp" />
+    <ClCompile Include="..\MLLib\NNBatchingProcThread.cpp" />
+    <ClCompile Include="..\MLLib\NNModelComponent.cpp" />
+    <ClCompile Include="..\MLLib\NNProcThreadBase.cpp" />
+    <ClCompile Include="..\MLLib\NNResConv2DMulti.cpp" />
+    <ClCompile Include="..\MLLib\NNScheduling.cpp" />
+    <ClCompile Include="..\MLLib\NNUNET.cpp" />
+    <ClCompile Include="..\MLLib\NNUtilityBlocks.cpp" />
+    <ClCompile Include="..\MLLib\SelfAttention.cpp" />
+    <ClCompile Include="..\MLLib\SharedMLHeader.cpp" />
+    <ClCompile Include="..\MLLib\VectorSequence.cpp" />
+    <ClCompile Include="..\Shared\AnimationIntermediateSeq.cpp" />
+    <ClCompile Include="..\Shared\AnimDataAug.cpp" />
+    <ClCompile Include="..\Shared\AnimGenBoneDictionary.cpp" />
+    <ClCompile Include="..\Shared\AnimGenDescDictionary.cpp" />
+    <ClCompile Include="..\Shared\AnimGenHyperParameters.cpp" />
+    <ClCompile Include="..\Shared\AnimGenProcThreadBase.cpp" />
+    <ClCompile Include="..\Shared\AnimGenSeqProcThread.cpp" />
+    <ClCompile Include="..\Shared\AnimImage.cpp" />
+    <ClCompile Include="..\Shared\AnimImageC3DR6.cpp" />
+    <ClCompile Include="..\Shared\AnimImageEuler.cpp" />
+    <ClCompile Include="..\Shared\AnimSeqDataSet.cpp" />
+    <ClCompile Include="..\Shared\AnimTrainingDataFiles.cpp" />
+    <ClCompile Include="..\Shared\BoneSequence.cpp" />
+    <ClCompile Include="..\Shared\BoneTree.cpp" />
+    <ClCompile Include="..\Shared\ModelIntermediate.cpp" />
+    <ClCompile Include="..\Shared\NNAnimEpoch.cpp" />
+    <ClCompile Include="..\Shared\NNCLIP.cpp" />
+    <ClCompile Include="..\Shared\NNCLIPComponent.cpp" />
+    <ClCompile Include="..\Shared\NNDDPMModelComponent.cpp" />
+    <ClCompile Include="..\Shared\NNDDPMSampler.cpp" />
+    <ClCompile Include="..\Shared\NNNoiseFinder.cpp" />
+    <ClCompile Include="..\Shared\NNNoiseFinderEpoch.cpp" />
+    <ClCompile Include="..\Shared\NNNoiseFinderLoss.cpp" />
+    <ClCompile Include="..\Shared\NNNoiseFinderModelComponent.cpp" />
+    <ClCompile Include="..\Shared\NNTextEncoder.cpp" />
+    <ClCompile Include="..\Shared\NNTextEncoderComponent.cpp" />
+    <ClCompile Include="..\Shared\NNTextEncoderEpoch.cpp" />
+    <ClCompile Include="..\Shared\NNTokenizer.cpp" />
+    <ClCompile Include="..\Shared\NNTokenizerModelComponent.cpp" />
+    <ClCompile Include="..\Shared\NNVAE.cpp" />
+    <ClCompile Include="..\Shared\NNVAEDecoder.cpp" />
+    <ClCompile Include="..\Shared\NNVAEEncoder.cpp" />
+    <ClCompile Include="..\Shared\NNVAELoss.cpp" />
+    <ClCompile Include="..\Shared\NNVAEModelComponent.cpp" />
+    <ClCompile Include="AnimGenProcThread.cpp" />
+    <ClCompile Include="MainMenuDialog.cpp" />
+    <ClCompile Include="PreviewScene.cpp" />
+    <ClCompile Include="ReaNNimatorGUI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\MLLib\AsciiTokenizer.h" />
+    <ClInclude Include="..\MLLib\AsciiWordDelimitedTokenizer.h" />
+    <ClInclude Include="..\MLLib\AttentionMulti.h" />
+    <ClInclude Include="..\MLLib\BoolSequence.h" />
+    <ClInclude Include="..\MLLib\C3DR6Sequence.h" />
+    <ClInclude Include="..\MLLib\Continuous3DRotation6.h" />
+    <ClInclude Include="..\MLLib\CrossAttention.h" />
+    <ClInclude Include="..\MLLib\CrossAttentionMulti.h" />
+    <ClInclude Include="..\MLLib\Encoder2D.h" />
+    <ClInclude Include="..\MLLib\EulerSequence.h" />
+    <ClInclude Include="..\MLLib\MLP.h" />
+    <ClInclude Include="..\MLLib\Mtx33Sequence.h" />
+    <ClInclude Include="..\MLLib\NNBatch.h" />
+    <ClInclude Include="..\MLLib\NNBatchingProcThread.h" />
+    <ClInclude Include="..\MLLib\NNModelComponent.h" />
+    <ClInclude Include="..\MLLib\NNProcThreadBase.h" />
+    <ClInclude Include="..\MLLib\NNResConv2DMulti.h" />
+    <ClInclude Include="..\MLLib\NNScheduling.h" />
+    <ClInclude Include="..\MLLib\NNUNET.h" />
+    <ClInclude Include="..\MLLib\NNUtilityBlocks.h" />
+    <ClInclude Include="..\MLLib\SelfAttention.h" />
+    <ClInclude Include="..\MLLib\SharedMLHeader.h" />
+    <ClInclude Include="..\MLLib\Tensorizable.h" />
+    <ClInclude Include="..\MLLib\VectorSequence.h" />
+    <ClInclude Include="..\Shared\AnimationIntermediateSeq.h" />
+    <ClInclude Include="..\Shared\AnimDataAug.h" />
+    <ClInclude Include="..\Shared\AnimGenBoneDictionary.h" />
+    <ClInclude Include="..\Shared\AnimGenDescDictionary.h" />
+    <ClInclude Include="..\Shared\AnimGenHyperParameters.h" />
+    <ClInclude Include="..\Shared\AnimGenProcThreadBase.h" />
+    <ClInclude Include="..\Shared\AnimGenSeqProcThread.h" />
+    <ClInclude Include="..\Shared\AnimImage.h" />
+    <ClInclude Include="..\Shared\AnimImageC3DR6.h" />
+    <ClInclude Include="..\Shared\AnimImageEuler.h" />
+    <ClInclude Include="..\Shared\AnimSeqDataSet.h" />
+    <ClInclude Include="..\Shared\AnimTrainingDataFiles.h" />
+    <ClInclude Include="..\Shared\BoneSequence.h" />
+    <ClInclude Include="..\Shared\BoneTree.h" />
+    <ClInclude Include="..\Shared\ModelIntermediate.h" />
+    <ClInclude Include="..\Shared\NNAnimEpoch.h" />
+    <ClInclude Include="..\Shared\NNCLIP.h" />
+    <ClInclude Include="..\Shared\NNCLIPComponent.h" />
+    <ClInclude Include="..\Shared\NNDDPMModelComponent.h" />
+    <ClInclude Include="..\Shared\NNDDPMSampler.h" />
+    <ClInclude Include="..\Shared\NNNoiseFinder.h" />
+    <ClInclude Include="..\Shared\NNNoiseFinderEpoch.h" />
+    <ClInclude Include="..\Shared\NNNoiseFinderLoss.h" />
+    <ClInclude Include="..\Shared\NNNoiseFinderModelComponent.h" />
+    <ClInclude Include="..\Shared\NNTextEncoder.h" />
+    <ClInclude Include="..\Shared\NNTextEncoderComponent.h" />
+    <ClInclude Include="..\Shared\NNTextEncoderEpoch.h" />
+    <ClInclude Include="..\Shared\NNTokenizer.h" />
+    <ClInclude Include="..\Shared\NNTokenizerModelComponent.h" />
+    <ClInclude Include="..\Shared\NNVAE.h" />
+    <ClInclude Include="..\Shared\NNVAEDecoder.h" />
+    <ClInclude Include="..\Shared\NNVAEEncoder.h" />
+    <ClInclude Include="..\Shared\NNVAELoss.h" />
+    <ClInclude Include="..\Shared\NNVAEModelComponent.h" />
+    <ClInclude Include="AnimGenProcThread.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="MainMenuDialog.h" />
+    <ClInclude Include="PreviewScene.h" />
+    <ClInclude Include="ReaNNimatorGUI.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ReaNNimatorGUI.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ReaNNimatorGUI.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

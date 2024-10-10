@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shared">
+      <UniqueIdentifier>{2ea53917-7340-46a9-82b0-de69be969d5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MLLib">
+      <UniqueIdentifier>{a3221064-52b0-40c9-8f19-6ca979fdbf1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MLLib\Data">
+      <UniqueIdentifier>{dea9a6ee-b292-4e35-8c41-334e77339e5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MLLib\Multi">
+      <UniqueIdentifier>{bd218f97-cdeb-48cb-96e3-bfd3bbd2e685}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MLLib\Attention">
+      <UniqueIdentifier>{3ec87ca2-a1e6-4f04-a9c8-59893e0c1190}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MLLib\Batch">
+      <UniqueIdentifier>{856b3940-0d84-43f1-8011-f8521dcf1ce4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MLLib\Scheduling">
+      <UniqueIdentifier>{bec476c9-5cf0-405c-b089-7008a981ebc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\Data">
+      <UniqueIdentifier>{8fe04289-228a-4aac-bf78-7020fa7422e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\Network">
+      <UniqueIdentifier>{17559771-3d3f-4f3a-9c61-f0abb7d76217}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\Network\CLIP">
+      <UniqueIdentifier>{c6c8b605-0782-4fd3-831e-7809ee84ef9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\Network\VAE">
+      <UniqueIdentifier>{90474ee5-a567-4d4d-957c-d43f7e7cdc00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\Network\NoiseFinder">
+      <UniqueIdentifier>{2dcf84c3-cce9-4e83-9bf4-c8919cfa1509}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\Network\TextEncoder">
+      <UniqueIdentifier>{98ff4501-61d8-4b6c-9827-50f816e65ef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\Network\Tokenizer">
+      <UniqueIdentifier>{354ff084-45d3-4484-af5b-e47e94ad11b0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="ReaNNimatorGUI.h" />
+    <ClInclude Include="PreviewScene.h" />
+    <ClInclude Include="MainMenuDialog.h" />
+    <ClInclude Include="AnimGenProcThread.h" />
+    <ClInclude Include="..\MLLib\NNModelComponent.h">
+      <Filter>MLLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\NNProcThreadBase.h">
+      <Filter>MLLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\SharedMLHeader.h">
+      <Filter>MLLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\AnimGenHyperParameters.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\AnimGenProcThreadBase.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\AnimGenSeqProcThread.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNAnimEpoch.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\AsciiTokenizer.h">
+      <Filter>MLLib\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\AsciiWordDelimitedTokenizer.h">
+      <Filter>MLLib\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\CrossAttentionMulti.h">
+      <Filter>MLLib\Multi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\Encoder2D.h">
+      <Filter>MLLib\Multi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\MLP.h">
+      <Filter>MLLib\Multi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\AttentionMulti.h">
+      <Filter>MLLib\Multi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\BoolSequence.h">
+      <Filter>MLLib\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\C3DR6Sequence.h">
+      <Filter>MLLib\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\Continuous3DRotation6.h">
+      <Filter>MLLib\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\CrossAttention.h">
+      <Filter>MLLib\Attention</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\EulerSequence.h">
+      <Filter>MLLib\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\Mtx33Sequence.h">
+      <Filter>MLLib\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\NNBatch.h">
+      <Filter>MLLib\Batch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\NNBatchingProcThread.h">
+      <Filter>MLLib\Batch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\NNResConv2DMulti.h">
+      <Filter>MLLib\Multi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\NNScheduling.h">
+      <Filter>MLLib\Scheduling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\NNUNET.h">
+      <Filter>MLLib\Multi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\SelfAttention.h">
+      <Filter>MLLib\Attention</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\VectorSequence.h">
+      <Filter>MLLib\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\Tensorizable.h">
+      <Filter>MLLib\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MLLib\NNUtilityBlocks.h">
+      <Filter>MLLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\AnimationIntermediateSeq.h">
+      <Filter>Shared\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\AnimDataAug.h">
+      <Filter>Shared\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\AnimGenBoneDictionary.h">
+      <Filter>Shared\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\AnimGenDescDictionary.h">
+      <Filter>Shared\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\AnimImage.h">
+      <Filter>Shared\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\AnimImageC3DR6.h">
+      <Filter>Shared\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\AnimImageEuler.h">
+      <Filter>Shared\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\AnimSeqDataSet.h">
+      <Filter>Shared\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\AnimTrainingDataFiles.h">
+      <Filter>Shared\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\BoneSequence.h">
+      <Filter>Shared\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\BoneTree.h">
+      <Filter>Shared\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\ModelIntermediate.h">
+      <Filter>Shared\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNCLIP.h">
+      <Filter>Shared\Network\CLIP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNCLIPComponent.h">
+      <Filter>Shared\Network\CLIP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNDDPMModelComponent.h">
+      <Filter>Shared\Network\NoiseFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNDDPMSampler.h">
+      <Filter>Shared\Network\NoiseFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNNoiseFinder.h">
+      <Filter>Shared\Network\NoiseFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNNoiseFinderEpoch.h">
+      <Filter>Shared\Network\NoiseFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNNoiseFinderLoss.h">
+      <Filter>Shared\Network\NoiseFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNNoiseFinderModelComponent.h">
+      <Filter>Shared\Network\NoiseFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNTextEncoder.h">
+      <Filter>Shared\Network\TextEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNTextEncoderComponent.h">
+      <Filter>Shared\Network\TextEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNTextEncoderEpoch.h">
+      <Filter>Shared\Network\TextEncoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNTokenizer.h">
+      <Filter>Shared\Network\Tokenizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNTokenizerModelComponent.h">
+      <Filter>Shared\Network\Tokenizer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNVAE.h">
+      <Filter>Shared\Network\VAE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNVAEDecoder.h">
+      <Filter>Shared\Network\VAE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNVAEEncoder.h">
+      <Filter>Shared\Network\VAE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNVAELoss.h">
+      <Filter>Shared\Network\VAE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\NNVAEModelComponent.h">
+      <Filter>Shared\Network\VAE</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ReaNNimatorGUI.cpp" />
+    <ClCompile Include="PreviewScene.cpp" />
+    <ClCompile Include="MainMenuDialog.cpp" />
+    <ClCompile Include="AnimGenProcThread.cpp" />
+    <ClCompile Include="..\MLLib\NNModelComponent.cpp">
+      <Filter>MLLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\NNProcThreadBase.cpp">
+      <Filter>MLLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\SharedMLHeader.cpp">
+      <Filter>MLLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\AnimGenHyperParameters.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\AnimGenProcThreadBase.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\AnimGenSeqProcThread.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNAnimEpoch.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\AsciiTokenizer.cpp">
+      <Filter>MLLib\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\AsciiWordDelimitedTokenizer.cpp">
+      <Filter>MLLib\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\AttentionMulti.cpp">
+      <Filter>MLLib\Multi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\BoolSequence.cpp">
+      <Filter>MLLib\Multi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\CrossAttentionMulti.cpp">
+      <Filter>MLLib\Multi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\Encoder2D.cpp">
+      <Filter>MLLib\Multi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\MLP.cpp">
+      <Filter>MLLib\Multi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\C3DR6Sequence.cpp">
+      <Filter>MLLib\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\Continuous3DRotation6.cpp">
+      <Filter>MLLib\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\CrossAttention.cpp">
+      <Filter>MLLib\Attention</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\EulerSequence.cpp">
+      <Filter>MLLib\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\Mtx33Sequence.cpp">
+      <Filter>MLLib\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\NNBatch.cpp">
+      <Filter>MLLib\Batch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\NNBatchingProcThread.cpp">
+      <Filter>MLLib\Batch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\NNResConv2DMulti.cpp">
+      <Filter>MLLib\Multi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\NNScheduling.cpp">
+      <Filter>MLLib\Scheduling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\NNUNET.cpp">
+      <Filter>MLLib\Multi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\SelfAttention.cpp">
+      <Filter>MLLib\Attention</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\VectorSequence.cpp">
+      <Filter>MLLib\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MLLib\NNUtilityBlocks.cpp">
+      <Filter>MLLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\AnimationIntermediateSeq.cpp">
+      <Filter>Shared\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\AnimDataAug.cpp">
+      <Filter>Shared\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\AnimGenBoneDictionary.cpp">
+      <Filter>Shared\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\AnimGenDescDictionary.cpp">
+      <Filter>Shared\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\AnimImage.cpp">
+      <Filter>Shared\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\AnimImageC3DR6.cpp">
+      <Filter>Shared\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\AnimImageEuler.cpp">
+      <Filter>Shared\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\AnimSeqDataSet.cpp">
+      <Filter>Shared\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\AnimTrainingDataFiles.cpp">
+      <Filter>Shared\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\BoneSequence.cpp">
+      <Filter>Shared\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\BoneTree.cpp">
+      <Filter>Shared\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\ModelIntermediate.cpp">
+      <Filter>Shared\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNCLIP.cpp">
+      <Filter>Shared\Network\CLIP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNCLIPComponent.cpp">
+      <Filter>Shared\Network\CLIP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNDDPMModelComponent.cpp">
+      <Filter>Shared\Network\NoiseFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNDDPMSampler.cpp">
+      <Filter>Shared\Network\NoiseFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNNoiseFinder.cpp">
+      <Filter>Shared\Network\NoiseFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNNoiseFinderEpoch.cpp">
+      <Filter>Shared\Network\NoiseFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNNoiseFinderLoss.cpp">
+      <Filter>Shared\Network\NoiseFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNNoiseFinderModelComponent.cpp">
+      <Filter>Shared\Network\NoiseFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNTextEncoder.cpp">
+      <Filter>Shared\Network\TextEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNTextEncoderComponent.cpp">
+      <Filter>Shared\Network\TextEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNTextEncoderEpoch.cpp">
+      <Filter>Shared\Network\TextEncoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNTokenizer.cpp">
+      <Filter>Shared\Network\Tokenizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNTokenizerModelComponent.cpp">
+      <Filter>Shared\Network\Tokenizer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNVAE.cpp">
+      <Filter>Shared\Network\VAE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNVAEDecoder.cpp">
+      <Filter>Shared\Network\VAE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNVAEEncoder.cpp">
+      <Filter>Shared\Network\VAE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNVAELoss.cpp">
+      <Filter>Shared\Network\VAE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\NNVAEModelComponent.cpp">
+      <Filter>Shared\Network\VAE</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="ReaNNimatorGUI.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ReaNNimatorGUI.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
