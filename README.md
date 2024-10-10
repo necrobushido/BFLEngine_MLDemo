@@ -8,3 +8,9 @@ The engine is an old game engine that I wrote many years ago.  A lot of things a
 Projects that use the engine exist in the projects folder.  The only real one in this repository is MachineLearning.  In order to prove to myself that I understood ML techniques I figured I should choose a project and work on it, and I had some knowledge of 3D animations so I figured trying to generate them was a good choice.  I stapled LibTorch to the engine for a tensor library.  The neural network architecture ended up largely based on Stable Diffusion, with a couple of tweaks.
 
 I made a video demonstrating the final product here : https://www.youtube.com/watch?v=hiUWEErujEc
+
+Compiling everything depends on having LibTorch, CUDA, and FBX installed.
+
+I used LibTorch version 2.1.2_cu118, and the project looks for environment variables "LIBTORCH_DEBUG" and "LIBTORCH_RELEASE".
+
+The project also looks for the environment variable "FBXSDK" when compiling some portion that depends on FBX.
